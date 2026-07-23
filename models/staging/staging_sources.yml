@@ -1,7 +1,5 @@
-    ```yml
-    version: 2
-    sources:
-    
+version: 2
+sources:
     - name: weather_data
       schema: s_mahmoudabdelaziz
       tables:
