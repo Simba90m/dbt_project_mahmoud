@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: mart_sales_performance
+    description: "Monthly sales performance by product category, built from Northwind-style shop_smart data"
+    columns:
+      - name: order_year
+        description: "Year the order was placed"
+        tests: [not_null]
+      - name: order_month
+        description: "Month the order was placed"
+        tests: [not_null]
+      - name: category_name
+        description: "Product category (sourced from products.category)"
+        tests: [not_null]
+      - name: total_revenue
+        description: "Sum of line-item revenue (unit_price * quantity * (1 - discount)) for that period and category"
+        tests: [not_null]
+      - name: total_orders
+        description: "Count of distinct orders contributing to that period and category"
+        tests: [not_null]
+      - name: avg_revenue_per_order
+        description: "total_revenue divided across total_orders"
+        tests: [not_null]
