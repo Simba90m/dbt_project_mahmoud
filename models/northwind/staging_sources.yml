@@ -1,11 +1,9 @@
-# models/northwind/staging_sources.yml  (or rename the file — it's just YAML)
 version: 2
 sources:
-  - name: shop_smart
-    schema: shop_smart
+  - name: northwind
+    schema: northwind
     tables:
-      - name: customers
-      - name: order_items
       - name: orders
+      - name: order_details
       - name: products
-      - name: promotions
+      - name: categories
